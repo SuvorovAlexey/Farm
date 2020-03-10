@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <script src="js/script.js" defer></script>
+
+    <title>Farm game</title>
+
+  </head>
+
+  <body>
+
+    <h1 class="h1">Добро пожаловать на ферму!</h1>
+    <p class="game-description">Соберите пшеницу (время роста нового урожая - 30 сек), покормите пшеницей курицу и корову (получите: молоко - 1шт/20 сек, яйца - 3шт [1шт/10 сек]), продайте продукты в магазине</p>
+    <p class="game-description">Чтобы изменить расположение животных и растений - нажмите кнопку под фермой, после перестановки повторно нажмите на кнопку</p>
+
+    <div class="counters">
+      <div class="wheat-counter">Пшеница: 0</div>
+      <div class="eggs-counter">Яйца: 0</div>
+      <div class="milk-counter">Молоко: 0</div>
+    </div>
+
+    <div class="field">
+     
+      <div class="app-area">
+        <div class="row">
+          <div class="cell cow"></div>
+          <div class="cell cow"></div>
+          <div class="cell cow"></div>
+          <div class="cell"></div>
+          <div class="cell chiken"></div>
+          <div class="cell chiken"></div>
+          <div class="cell chiken"></div>
+          <div class="cell"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell cow"></div>
+          <div class="cell cow"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell chiken"></div>
+          <div class="cell chiken"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell wheat"></div>
+          <div class="cell"></div>
+          <div class="cell wheat"></div>
+          <div class="cell"></div>
+          <div class="cell chiken"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell"></div>
+          <div class="cell cow"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell wheat"></div>
+          <div class="cell"></div>
+          <div class="cell wheat"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell wheat"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell"></div>
+          <div class="cell wheat"></div>
+          <div class="cell"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+          <div class="cell wheat"></div>
+        </div>
+        <button id="reposition">Поменять животных/злаковые местами</button>
+      </div>
+
+      <div class="store">
+        <p class="food-price">молоко: 50 руб. за шт</p>
+        <button class="sale">Продать молоко</button>
+        <p class="food-price">яйцо: 8 руб. за шт</p>
+        <button class="sale">Продать яйца</button>
+        <p class="get-money">Заработано денег: 0 руб.</p>
+      </div>
+
+    </div>
+    
+  </body>
+
+</html>
