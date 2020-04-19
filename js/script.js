@@ -98,49 +98,49 @@ saleBtn[1].addEventListener('click', function(){
 
 
 //кнопка перемещния элементов
-let buttonReposition = document.getElementById('reposition')
-let unit = document.querySelectorAll('.cell')
+// let buttonReposition = document.getElementById('reposition')
+// let unit = document.querySelectorAll('.cell')
 
-buttonReposition.addEventListener('click', ()=> {
-    buttonReposition.classList.toggle('btnActive')
-})
+// buttonReposition.addEventListener('click', ()=> {
+//     buttonReposition.classList.toggle('btnActive')
+// })
 
-for (let index = 0; index < unit.length; index++) {
+// for (let index = 0; index < unit.length; index++) {
 
-    unit[index].onmousedown = function(event) { // (1) отследить нажатие
+//     unit[index].onmousedown = function(event) { // (1) отследить нажатие
 
-        if(buttonReposition.classList == 'btnActive') {
-            // (2) подготовить к перемещению:
-            // разместить поверх остального содержимого и в абсолютных координатах
-            unit[index].style.position = 'absolute';
-            unit[index].style.zIndex = 1000;
+//         if(buttonReposition.classList == 'btnActive') {
+//             // (2) подготовить к перемещению:
+//             // разместить поверх остального содержимого и в абсолютных координатах
+//             unit[index].style.position = 'absolute';
+//             unit[index].style.zIndex = 1000;
             
-            // и установим абсолютно спозиционированный объект под курсор
-            moveAt(event.pageX, event.pageY);
+//             // и установим абсолютно спозиционированный объект под курсор
+//             moveAt(event.pageX, event.pageY);
         
-            // передвинуть объект под координаты курсора
-            // и сдвинуть на половину ширины/высоты для центрирования
-            function moveAt(pageX, pageY) {
-                unit[index].style.left = pageX - unit[index].offsetWidth / 2 + 'px';
-                unit[index].style.top = pageY - unit[index].offsetHeight / 2 + 'px';
-            }
+//             // передвинуть объект под координаты курсора
+//             // и сдвинуть на половину ширины/высоты для центрирования
+//             function moveAt(pageX, pageY) {
+//                 unit[index].style.left = pageX - unit[index].offsetWidth / 2 + 'px';
+//                 unit[index].style.top = pageY - unit[index].offsetHeight / 2 + 'px';
+//             }
         
-            function onMouseMove(event) {
-            moveAt(event.pageX, event.pageY);
-            }
+//             function onMouseMove(event) {
+//             moveAt(event.pageX, event.pageY);
+//             }
         
-            // (3) перемещать по экрану
-            document.addEventListener('mousemove', onMouseMove);
+//             // (3) перемещать по экрану
+//             document.addEventListener('mousemove', onMouseMove);
         
-            // (4) положить объект, удалить более ненужные обработчики событий
-            unit[index].onmouseup = function() {
-            document.removeEventListener('mousemove', onMouseMove);
-            unit[index].onmouseup = null;
-            };
-        }
-      };
+//             // (4) положить объект, удалить более ненужные обработчики событий
+//             unit[index].onmouseup = function() {
+//             document.removeEventListener('mousemove', onMouseMove);
+//             unit[index].onmouseup = null;
+//             };
+//         }
+//       };
     
-}
+// }
 
        
     
