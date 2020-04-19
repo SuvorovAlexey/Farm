@@ -23,7 +23,7 @@ appArea.onclick = function(event) {
     let target = event.target; // где был клик?
 
     //нажимаем на корову
-    if (target.classList == 'cell cow' && wheat.sum >= 1 && buttonReposition.classList != 'btnActive') {
+    if (target.classList == 'cell cow' && wheat.sum >= 1) {
         target.classList = 'cell cow waiting-cow'
         let bringBackBG = () => {
             target.classList = 'cell cow'
@@ -41,7 +41,7 @@ appArea.onclick = function(event) {
 
 
     //нажимаем на курицу
-    else if (target.classList == 'cell chiken' && wheat.sum >= 1 && buttonReposition.classList != 'btnActive') {
+    else if (target.classList == 'cell chiken' && wheat.sum >= 1) {
         target.classList = 'cell chiken waiting-chiken'
         let bringBackBG = () => {
             target.classList = 'cell chiken' 
@@ -62,12 +62,12 @@ appArea.onclick = function(event) {
     }
 
     //если не хватает пшеницы
-    else if ((target.classList == 'cell cow' || target.classList == 'cell chiken') && wheat.sum < 1 && buttonReposition.classList != 'btnActive') {
+    else if ((target.classList == 'cell cow' || target.classList == 'cell chiken') && wheat.sum < 1) {
         alert('Недостаточно пшеницы!')
     }
 
     //нажимаем на пшеницу
-    else if  (target.classList == 'cell wheat' && buttonReposition.classList != 'btnActive') {
+    else if  (target.classList == 'cell wheat') {
         target.classList = 'cell wheat waiting-wheat'
         let bringBackCow = () => {
             target.classList = 'cell wheat'
